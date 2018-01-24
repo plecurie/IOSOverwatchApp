@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="swift_api_reboot" customModuleProvider="target">
             <connections>
+                <outlet property="infoLabel" destination="o6m-TK-5Dz" id="zLR-SW-LbE"/>
                 <outlet property="view" destination="k2f-Ou-bej" id="yh4-z9-mVL"/>
             </connections>
         </placeholder>

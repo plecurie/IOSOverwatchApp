@@ -23,6 +23,7 @@ class DbConnect {
         if sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS player (id INTEGER PRIMARY KEY AUTOINCREMENT, tag TEXT, platform TEXT, region TEXT)", nil, nil, nil) != SQLITE_OK {
             print("Error : cannot create the table !")
         }
+        //print(fileUrl.path)
     }
     
     func getList() -> [Player] {

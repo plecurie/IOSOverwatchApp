@@ -12,15 +12,18 @@
 		CD27C60F2017CCF1006EE514 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD27C60D2017CCF1006EE514 /* LaunchScreen.storyboard */; };
 		CD27C6182017CE3F006EE514 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27C6162017CE3F006EE514 /* AccountViewController.swift */; };
 		CD27C6192017CE3F006EE514 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD27C6172017CE3F006EE514 /* AccountViewController.xib */; };
-		CD27C61C2017CE76006EE514 /* PlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27C61A2017CE76006EE514 /* PlayerListViewController.swift */; };
-		CD27C61D2017CE76006EE514 /* PlayerListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD27C61B2017CE76006EE514 /* PlayerListViewController.xib */; };
-		CD27C6202017CE8D006EE514 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27C61E2017CE8D006EE514 /* ProfileViewController.swift */; };
-		CD27C6212017CE8D006EE514 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD27C61F2017CE8D006EE514 /* ProfileViewController.xib */; };
 		CD27C6242017CEA4006EE514 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27C6222017CEA4006EE514 /* StatisticsViewController.swift */; };
 		CD27C6252017CEA4006EE514 /* StatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD27C6232017CEA4006EE514 /* StatisticsViewController.xib */; };
 		CD27C6272017CEC4006EE514 /* ApiConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27C6262017CEC4006EE514 /* ApiConnect.swift */; };
 		CD27C6292017CEE1006EE514 /* DbConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27C6282017CEE1006EE514 /* DbConnect.swift */; };
 		CD27C62B2017CEF8006EE514 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD27C62A2017CEF8006EE514 /* Player.swift */; };
+		CDEBEFEA201A39ED00F45D0C /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBEFE8201A39ED00F45D0C /* PlayerTableViewCell.swift */; };
+		CDEBEFEB201A39ED00F45D0C /* PlayerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDEBEFE9201A39ED00F45D0C /* PlayerTableViewCell.xib */; };
+		CDEBEFEE201A813700F45D0C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBEFEC201A813700F45D0C /* ProfileViewController.swift */; };
+		CDEBEFEF201A813700F45D0C /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDEBEFED201A813700F45D0C /* ProfileViewController.xib */; };
+		CDEBEFF0201A84BC00F45D0C /* swift-api_reboot.app in Resources */ = {isa = PBXBuildFile; fileRef = CD27C6012017CCF0006EE514 /* swift-api_reboot.app */; };
+		CDEBEFF3201A85C700F45D0C /* PlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEBEFF1201A85C700F45D0C /* PlayerListViewController.swift */; };
+		CDEBEFF4201A85C700F45D0C /* PlayerListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDEBEFF2201A85C700F45D0C /* PlayerListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,15 +34,17 @@
 		CD27C6102017CCF1006EE514 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD27C6162017CE3F006EE514 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		CD27C6172017CE3F006EE514 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
-		CD27C61A2017CE76006EE514 /* PlayerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
-		CD27C61B2017CE76006EE514 /* PlayerListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerListViewController.xib; sourceTree = "<group>"; };
-		CD27C61E2017CE8D006EE514 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		CD27C61F2017CE8D006EE514 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		CD27C6222017CEA4006EE514 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		CD27C6232017CEA4006EE514 /* StatisticsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsViewController.xib; sourceTree = "<group>"; };
 		CD27C6262017CEC4006EE514 /* ApiConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConnect.swift; sourceTree = "<group>"; };
 		CD27C6282017CEE1006EE514 /* DbConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbConnect.swift; sourceTree = "<group>"; };
 		CD27C62A2017CEF8006EE514 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		CDEBEFE8201A39ED00F45D0C /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
+		CDEBEFE9201A39ED00F45D0C /* PlayerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerTableViewCell.xib; sourceTree = "<group>"; };
+		CDEBEFEC201A813700F45D0C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CDEBEFED201A813700F45D0C /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		CDEBEFF1201A85C700F45D0C /* PlayerListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
+		CDEBEFF2201A85C700F45D0C /* PlayerListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +80,12 @@
 				CD27C6042017CCF0006EE514 /* AppDelegate.swift */,
 				CD27C6162017CE3F006EE514 /* AccountViewController.swift */,
 				CD27C6172017CE3F006EE514 /* AccountViewController.xib */,
-				CD27C61A2017CE76006EE514 /* PlayerListViewController.swift */,
-				CD27C61B2017CE76006EE514 /* PlayerListViewController.xib */,
-				CD27C61E2017CE8D006EE514 /* ProfileViewController.swift */,
-				CD27C61F2017CE8D006EE514 /* ProfileViewController.xib */,
+				CDEBEFF1201A85C700F45D0C /* PlayerListViewController.swift */,
+				CDEBEFF2201A85C700F45D0C /* PlayerListViewController.xib */,
+				CDEBEFE8201A39ED00F45D0C /* PlayerTableViewCell.swift */,
+				CDEBEFE9201A39ED00F45D0C /* PlayerTableViewCell.xib */,
+				CDEBEFEC201A813700F45D0C /* ProfileViewController.swift */,
+				CDEBEFED201A813700F45D0C /* ProfileViewController.xib */,
 				CD27C6222017CEA4006EE514 /* StatisticsViewController.swift */,
 				CD27C6232017CEA4006EE514 /* StatisticsViewController.xib */,
 				CD27C60B2017CCF1006EE514 /* Assets.xcassets */,
@@ -150,12 +157,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDEBEFEF201A813700F45D0C /* ProfileViewController.xib in Resources */,
+				CDEBEFF0201A84BC00F45D0C /* swift-api_reboot.app in Resources */,
 				CD27C60F2017CCF1006EE514 /* LaunchScreen.storyboard in Resources */,
-				CD27C61D2017CE76006EE514 /* PlayerListViewController.xib in Resources */,
 				CD27C60C2017CCF1006EE514 /* Assets.xcassets in Resources */,
 				CD27C6252017CEA4006EE514 /* StatisticsViewController.xib in Resources */,
-				CD27C6212017CE8D006EE514 /* ProfileViewController.xib in Resources */,
+				CDEBEFF4201A85C700F45D0C /* PlayerListViewController.xib in Resources */,
 				CD27C6192017CE3F006EE514 /* AccountViewController.xib in Resources */,
+				CDEBEFEB201A39ED00F45D0C /* PlayerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,10 +178,11 @@
 				CD27C6292017CEE1006EE514 /* DbConnect.swift in Sources */,
 				CD27C6052017CCF0006EE514 /* AppDelegate.swift in Sources */,
 				CD27C6242017CEA4006EE514 /* StatisticsViewController.swift in Sources */,
-				CD27C61C2017CE76006EE514 /* PlayerListViewController.swift in Sources */,
 				CD27C62B2017CEF8006EE514 /* Player.swift in Sources */,
+				CDEBEFF3201A85C700F45D0C /* PlayerListViewController.swift in Sources */,
 				CD27C6272017CEC4006EE514 /* ApiConnect.swift in Sources */,
-				CD27C6202017CE8D006EE514 /* ProfileViewController.swift in Sources */,
+				CDEBEFEE201A813700F45D0C /* ProfileViewController.swift in Sources */,
+				CDEBEFEA201A39ED00F45D0C /* PlayerTableViewCell.swift in Sources */,
 				CD27C6182017CE3F006EE514 /* AccountViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

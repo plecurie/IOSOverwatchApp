@@ -12,6 +12,7 @@ import SQLite3
 class DbConnect {
     
     var db: OpaquePointer?
+    var api = ApiConnect()
     
     func initDB() {
         let fileUrl = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
@@ -42,9 +43,9 @@ class DbConnect {
             let platform = String(cString: sqlite3_column_text(bdd, 2))
             let region = String(cString: sqlite3_column_text(bdd, 3))
             
-            print(tag)
+            let player = api.getProfile(id: Int(id), tag: tag, platform: platform, region: region)
+            playerList.append(player)
             
-            playerList.append(Player(id: Int(id), tag: String(describing: tag), platform: String(describing: platform), region: String(describing: region)))
         }
         return playerList
     }
@@ -84,6 +85,66 @@ class DbConnect {
             print("failure inserting player: \(errmsg)")
             return
         }
+    }
+    
+    func getProfile(tag: String) -> Player {
+        
+        let id = 0
+        let tag = ""
+        let platform = ""
+        let region = ""
+        let rank = 0
+        let portrait = ""
+        
+        var player : Player = Player(id: id, tag: tag, platform: platform, region: region, rank: rank, portrait: portrait)
+        
+        let sql = "SELECT * FROM player WHERE tag = " + tag
+        var bdd: OpaquePointer?
+        
+        if sqlite3_prepare(db, sql, -1, &bdd, nil) != SQLITE_OK {
+            print("ERROR : SQL query failed !")
+        }
+        
+        while(sqlite3_step(bdd) == SQLITE_ROW){
+            let id = sqlite3_column_int(bdd, 0)
+            let tag = String(cString: sqlite3_column_text(bdd, 1))
+            let platform = String(cString: sqlite3_column_text(bdd, 2))
+            let region = String(cString: sqlite3_column_text(bdd, 3))
+            
+            player = api.getProfile(id: Int(id), tag: tag, platform: platform, region: region)
+            
+        }
+        return player
+    }
+    
+    func getStats(tag: String) -> Player {
+        
+        let id = 0
+        let tag = ""
+        let platform = ""
+        let region = ""
+        let rank = 0
+        let portrait = ""
+        
+        var player : Player = Player(id: id, tag: tag, platform: platform, region: region, rank: rank, portrait: portrait)
+        
+        let sql = "SELECT * FROM player WHERE tag = " + tag
+        var bdd: OpaquePointer?
+        
+        if sqlite3_prepare(db, sql, -1, &bdd, nil) != SQLITE_OK {
+            print("ERROR : SQL query failed !")
+        }
+        
+        while(sqlite3_step(bdd) == SQLITE_ROW){
+            let id = sqlite3_column_int(bdd, 0)
+            let tag = String(cString: sqlite3_column_text(bdd, 1))
+            let platform = String(cString: sqlite3_column_text(bdd, 2))
+            let region = String(cString: sqlite3_column_text(bdd, 3))
+            
+            player = api.getStats(id: Int(id), tag: tag, platform: platform, region: region)
+            
+        }
+        return player
     }
 }
 

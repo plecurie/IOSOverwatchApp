@@ -14,12 +14,16 @@ class Player {
     var tag: String?
     var platform : String?
     var region : String?
-    
-    init(id: Int, tag: String?, platform: String?, region: String?){
+    var rank: Int?
+    var portrait: String?
+
+    init(id: Int, tag: String?, platform: String?, region: String?, rank: Int?, portrait: String?){
         self.id = id
         self.tag = tag
         self.platform = platform
         self.region = region
+        self.rank = rank
+        self.portrait = portrait
     }
-    
 }
+

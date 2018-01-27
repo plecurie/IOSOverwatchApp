@@ -24,9 +24,8 @@
                     <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Registered players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jev-LA-jpb">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Registered players" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jev-LA-jpb">
                     <rect key="frame" x="116" y="35" width="142" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -36,9 +35,11 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="J0g-mx-vCf" secondAttribute="trailing" id="4cR-h3-N1O"/>
                 <constraint firstAttribute="bottom" secondItem="J0g-mx-vCf" secondAttribute="bottom" id="5Ey-oY-Xkt"/>
+                <constraint firstItem="J0g-mx-vCf" firstAttribute="top" secondItem="jev-LA-jpb" secondAttribute="bottom" constant="8" id="GLc-OT-sEf"/>
                 <constraint firstItem="J0g-mx-vCf" firstAttribute="leading" secondItem="uha-Fj-uNb" secondAttribute="leading" id="JZn-L2-XMH"/>
                 <constraint firstItem="J0g-mx-vCf" firstAttribute="top" secondItem="uha-Fj-uNb" secondAttribute="top" constant="64" id="bh2-Aw-emy"/>
                 <constraint firstItem="J0g-mx-vCf" firstAttribute="centerX" secondItem="uha-Fj-uNb" secondAttribute="centerX" id="h26-dr-06Q"/>
+                <constraint firstItem="jev-LA-jpb" firstAttribute="centerX" secondItem="J0g-mx-vCf" secondAttribute="centerX" id="nCN-bu-hde"/>
             </constraints>
             <point key="canvasLocation" x="-1987" y="-7"/>
         </view>

@@ -9,14 +9,27 @@
 import UIKit
 
 class StatisticsViewController: UIViewController {
-
+    
+    var db = DbConnect()
+    
     @IBOutlet var infoLabel: UILabel!
-    var selectedText: String?
+    var selectedPlayer: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.infoLabel.text = self.selectedText
-        // Do any additional setup after loading the view.
+        displayStats()
     }
-
+    
+    func displayStats() {
+        let player = db.getStats(tag: selectedPlayer!)
+        print(player.tag as Any)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+        self.infoLabel.text = self.selectedPlayer
+    }
+    
 }
+

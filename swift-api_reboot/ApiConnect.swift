@@ -10,46 +10,67 @@ import Foundation
 
 class ApiConnect {
     
-    func searchProfile(tag: String, platform: String, region: String){
+    func getProfile(id: Int,tag: String, platform: String, region: String) -> Player {
         
-        let path = "http://0.0.0.0:3000/profile/" + platform + "/" + region + "/" + tag
-        guard let jsonURL = URL(string: path) else {
-            return
-        }
-        let task = URLSession.shared.dataTask(with: jsonURL) { (data, res, err) in
-            guard let responseData = data else {
-                return
-            }
-            guard let json = try? JSONSerialization.jsonObject(with: responseData, options: .allowFragments),
-                let dict = json as? [String: Any]
-                else {
+        var rank = 10
+        var portrait = ""
+        var player = Player(id: Int(id), tag: String(describing: tag), platform: String(describing: platform), region: String(describing: region), rank: Int(rank), portrait: String(describing: portrait))
+        
+        
+        let path = "http://127.0.0.1:3000/profile/" + platform + "/" + region + "/" + tag
+        
+        if let jsonURL = URL(string: path) {
+            let task = URLSession.shared.dataTask(with: jsonURL) { (data, res, err) in
+                guard let responseData = data else {
                     return
+                }
+                guard let json = try? JSONSerialization.jsonObject(with: responseData, options: .allowFragments),
+                    let dict = json as? [String: Any]
+                    else {
+                        return
+                }
+                
+                if !dict.isEmpty {
+                    rank = (dict["level"] as? Int)!
+                    portrait = (dict["portrait"] as? String)!
+                    
+                    player = Player(id: Int(id), tag: String(describing: tag), platform: String(describing: platform), region: String(describing: region), rank: Int(rank), portrait: String(describing: portrait))
+                }
+                print(rank)
             }
-            print(dict["username"] as Any)
-            print(dict["level"] as Any)
+            task.resume()
         }
-        task.resume()
+        return player
     }
     
-    func searchStats(tag: String, platform: String, region: String){
+    func getStats(id: Int, tag: String, platform: String, region: String) -> Player {
+        
+        var rank = 10
+        var portrait = ""
+        var player = Player(id: Int(id), tag: String(describing: tag), platform: String(describing: platform), region: String(describing: region), rank: Int(rank), portrait: String(describing: portrait))
         
         let path = "http://0.0.0.0:3000/stats/" + platform + "/" + region + "/" + tag
-        guard let jsonURL = URL(string: path) else {
-            return
-        }
-        let task = URLSession.shared.dataTask(with: jsonURL) { (data, res, err) in
-            guard let responseData = data else {
-                return
-            }
-            guard let json = try? JSONSerialization.jsonObject(with: responseData, options: .allowFragments),
-                let dict = json as? [String: Any]
-                else {
+        if let jsonURL = URL(string: path) {
+            let task = URLSession.shared.dataTask(with: jsonURL) { (data, res, err) in
+                guard let responseData = data else {
                     return
+                }
+                guard let json = try? JSONSerialization.jsonObject(with: responseData, options: .allowFragments),
+                    let dict = json as? [String: Any]
+                    else {
+                        return
+                }
+                
+                if !dict.isEmpty {
+                    rank = (dict["level"] as? Int)!
+                    portrait = (dict["portrait"] as? String)!
+                    
+                    player = Player(id: Int(id), tag: String(describing: tag), platform: String(describing: platform), region: String(describing: region), rank: Int(rank), portrait: String(describing: portrait))
+                }
             }
-            print(dict["username"] as Any)
-            print(dict["level"] as Any)
+            task.resume()
         }
-        task.resume()
+        return player
     }
     
 }

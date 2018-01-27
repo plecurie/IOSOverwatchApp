@@ -9,27 +9,55 @@
 import UIKit
 
 class AccountViewController: UIViewController {
-
+    
+    @IBOutlet weak var textFieldTag: UITextField!
+    @IBOutlet weak var textFieldPassword: UITextField!
+    @IBOutlet weak var newTextFieldTag: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        self.textFieldTag.delegate = self
+        self.textFieldPassword.delegate = self
+        
+        self.title = "Overwatch-api"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func buttonSave(_ sender: UIButton) {
+        guard let tag = self.textFieldTag.text, let password = self.textFieldPassword.text else {
+            return
+        }
+        
+        if !tag.isEmpty && !password.isEmpty {
+            
+            if tag == "root" && password == "root" {
+                let alert = UIAlertController(title: "Access granted", message: "Administrator mode", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Fermer", style: .cancel))
+                self.present(alert, animated: true)
+            }
+            displayProfile(tag: tag)
+        }
+        else {
+            print("il faut remplir tous les champs !")
+        }
     }
-    */
-
+    
+    func displayProfile(tag: String) {
+        let playerTag = tag
+        let profileViewController = ProfileViewController()
+        profileViewController.selectedPlayer = playerTag
+        self.navigationController?.pushViewController(profileViewController, animated: true)
+    }
 }
+
+extension AccountViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if self.textFieldTag == textField {
+            self.textFieldPassword.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+}
+

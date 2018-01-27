@@ -9,14 +9,26 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
+    var db = DbConnect()
+    
     @IBOutlet var infoLabel: UILabel!
-    var selectedText: String?
+    var selectedPlayer: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.infoLabel.text = self.selectedText
-        // Do any additional setup after loading the view.
+        displayProfile()
     }
-
+    
+    func displayProfile() {
+        let player = db.getProfile(tag: selectedPlayer!)
+        print(player.tag as Any)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+        self.infoLabel.text = self.selectedPlayer
+    }
 }
+
